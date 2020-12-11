@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gauna Jorge Emanuel</title>
+    <link rel="stylesheet" href="css\styles.css">
+    <script src="js\Persona.js"></script>
+    <script src="js\Cliente.js"></script>
+    <script src="js\functions.js"></script>
+</head>
+
+<body>
+    <hr>
+    <h2># ABM PERSONAS #</h2>
+    <hr>
+    <div class="contenedor" id="id-contenedor">
+        <label for="id-id">Id:</label>
+        <input type="text" name="name-id" id="id-id" value="" disabled>
+        <label for="id-marca">Nombre:</label>
+        <input type="text" name="name-nombre" id="id-nombre" class="inputSinError">
+        <label for="id-modelo">Apellido:</label>
+        <input type="text" name="name-apellido" id="id-apellido" class="inputSinError">
+        <label for="id-precio">Edad:</label>
+        <input type="text" name="name-edad" id="id-edad" class="inputSinError">
+        <label for="id-tipo">Sexo:</label>
+        <select name="name-sexo" id="id-sexo" class="inputSinError">
+            <option hidden disabled selected value> -- select an option -- </option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+        </select>
+
+        <div class="botonesContenedor">
+            <input type="button" class="boton botonAzul" name="name-botonAgregar" id="id-botonAgregar" value="Agregar">
+            <input type="button" class="boton botonAzul" name="name-botonCerrar" id="id-botonEliminar" value="Eliminar">
+            <input type="button" class="boton botonRojo" name="name-botonLimpiar" id="id-botonLimpiar" value="Limpiar">
+        </div>
+
+    </div>
+
+    <hr>
+    <h2>Filtros</h2>
+    <hr>
+    <div class="contenedorFiltros" id="id-contenedorFiltros">
+        <label class="filtros" for="id-filtrar">Filtrar por:</label>
+        <select class="filtros" name="name-filtrar" id="id-filtrar">
+            <option value="Todos">Todos</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+        </select>
+        <label class="filtros" for="id-promedioEdad">Promedio de edad:</label>
+        <input class="filtros" type="text" name="name-promedioEdad" id="id-promedioEdad">
+        <input type="button" id="id-calcularPromedio" value="Calcular Promedio">
+    </div>
+    <div class="contenedorFiltrosCheckBox" id="id-contenedorFiltrosCheckbox">
+        <label for="id-checkBoxId">Id</label>
+        <input type="checkbox" name="name-checkBoxId" id="id-checkBoxId" checked>
+        <label for="id-checkBoxNombre">Nombre</label>
+        <input type="checkbox" name="name-checkBoxNombre" id="id-checkBoxNombre" checked>
+        <label for="id-checkBoxApellido">Apellido</label>
+        <input type="checkbox" name="name-checkBoxApellido" id="id-checkBoxApellido" checked>
+        <label for="id-checkBoxEdad">Edad</label>
+        <input type="checkbox" name="name-checkBoxEdad" id="id-checkBoxEdad" checked>
+    </div>
+
+    <hr>
+    <h2>--- Lista de clientes ---</h2>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th id="id-thId">Id</th>
+                <th id="id-thNombre">Nombre</th>
+                <th id="id-thApellido">Apellido</th>
+                <th id="id-thEdad">edad</th>
+                <th id="id-thSexo">sexo</th>
+            </tr>
+        </thead>
+        <tbody id="tcuerpo" class="cuerpoTabla">
+
+        </tbody>
+    </table>
+</body>
+
+</html>
